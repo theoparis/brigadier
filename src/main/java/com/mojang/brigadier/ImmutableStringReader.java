@@ -4,23 +4,23 @@
 package com.mojang.brigadier;
 
 public interface ImmutableStringReader {
-    String getString();
+	String getString();
 
-    int getRemainingLength();
+	int getRemainingLength();
 
-    int getTotalLength();
+	int getTotalLength();
 
-    int getCursor();
+	int getCursor();
 
-    String getRead();
+	String getRead();
 
-    String getRemaining();
+	String getRemaining();
 
-    boolean canRead(int length);
+	boolean canRead(int length);
 
-    boolean canRead();
+	boolean canRead();
 
-    char peek();
+	char peek();
 
-    char peek(int offset);
+	char peek(int offset);
 }

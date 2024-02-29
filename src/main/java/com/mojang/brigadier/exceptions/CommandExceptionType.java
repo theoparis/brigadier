@@ -3,5 +3,4 @@
 
 package com.mojang.brigadier.exceptions;
 
-public interface CommandExceptionType {
-}
+public interface CommandExceptionType {}
