@@ -7,16 +7,16 @@ jobs:
     name: Build and test
     runs-on: ubuntu-latest
     container:
-      image: docker.io/theoparis/openjdk:22
+      image: docker.io/theoparis/openjdk:22@sha256:349ab0fdd918ba05bb11d70a36ac134ce73140918ca56f4f4120499067a129a3
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@a8f75513eafdebd8141bd1cd4e30fcd194af8dfa # v2
         with:
           arguments: build test
       - name: Publish Test Report
-        uses: mikepenz/action-junit-report@v3
+        uses: mikepenz/action-junit-report@150e2f992e4fad1379da2056d1d1c279f520e058 # v3
         if: always()
         with:
           report_paths: '**/build/test-results/test/TEST-*.xml'
